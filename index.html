@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commons MVP</title>
+<meta name="description" content="Commons spreads what a company's best AI users do to everyone else, and proves it stuck. Clickable MVP and research briefs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --bg: #ffffff; --ink: #16181d; --muted: #5b616e; --rule: #e3e6eb; --panel: #f6f7f9;
+    --accent: #1f5fbf; --accent-soft: #e9f0fb; --good: #1d7a4f; --good-soft: #e7f4ed;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111317; --ink: #e9ebef; --muted: #9aa1ad; --rule: #2a2e36; --panel: #1a1d23;
+      --accent: #7aa7ec; --accent-soft: #1b2638; --good: #6cc59a; --good-soft: #17281f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Geist, -apple-system, "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.55; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 56px 16px 72px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.1; letter-spacing: -0.02em; margin: 10px 0 14px; }
+  h2 { font-size: 20px; letter-spacing: -0.01em; margin: 48px 0 6px; }
+  .lede { font-size: 18px; color: var(--muted); max-width: 680px; margin: 0 0 24px; }
+  .sub { color: var(--muted); margin: 0 0 18px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 8px; background: var(--ink); color: var(--bg); font-weight: 600; text-decoration: none; }
+  .btn:hover { opacity: .88; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .card { border: 1px solid var(--rule); border-radius: 12px; padding: 18px; background: var(--bg); display: flex; flex-direction: column; }
+  .card h3 { font-size: 16px; margin: 0 0 6px; }
+  .card p { margin: 0 0 14px; color: var(--muted); font-size: 14.5px; flex: 1; }
+  .card a.dl { font-weight: 600; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .card a.dl:hover { text-decoration: underline; }
+  .tag { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); margin-bottom: 10px; align-self: flex-start; }
+  .how { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .how div { background: var(--panel); border-radius: 10px; padding: 14px 16px; font-size: 14.5px; }
+  .how b { display: block; margin-bottom: 4px; }
+  ol.stages { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
+  ol.stages li { display: grid; grid-template-columns: 90px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  ol.stages .w { color: var(--muted); font-size: 13px; }
+  ol.stages b { display: block; }
+  ol.stages span.q { color: var(--muted); }
+  .now b::after { content: "built"; margin-left: 8px; font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 99px; background: var(--good-soft); color: var(--good); vertical-align: 2px; }
+  footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px; }
+  @media (max-width: 520px) { ol.stages li { grid-template-columns: 1fr; gap: 2px; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="eyebrow">Commons · MVP</div>
+  <h1>Spread what your best AI users do to everyone else, and prove it stuck.</h1>
+  <p class="lede">Companies buy hundreds of Claude seats, and a small group of power users gets most of the value. Commons finds the work those people already do with Claude, turns it into skills colleagues can run, and shows which ones people are still using a month later.</p>
+  <div class="row">
+    <a class="btn" href="mvp.html">Open the clickable MVP →</a>
+    <a class="btn ghost" href="research/commons-strategy-roadmap.pdf">Read the strategy &amp; roadmap</a>
+  </div>
+
+  <h2>How the MVP works</h2>
+  <p class="sub">The prototype uses demo data. Use <b>Viewing as</b> in the top bar to switch between the admin and employee views.</p>
+  <div class="how">
+    <div><b>1 · One required plugin</b>The company installs one Claude plugin. Its hooks report prompts, skill runs and files from Cowork and Claude Code. Claude's own telemetry export adds who each session belongs to.</div>
+    <div><b>2 · Analytics</b>Who is active, how deeply people use Claude, what kinds of work they do, and which skills get used.</div>
+    <div><b>3 · Skills</b>The company skill library, ranked by real runs. A queue turns repeated work that has no skill yet into drafted skills for an admin to publish.</div>
+  </div>
+
+  <h2>Research</h2>
+  <p class="sub">Each brief starts with a one-page summary, and the evidence and sources follow.</p>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Strategy · 5 pages</span>
+      <h3>From dashboard to diffusion engine</h3>
+      <p>What Claude now does natively, what's left to build, five strategic choices, and a five-stage roadmap of small features, each with what the customer gets at the end of the stage.</p>
+      <a class="dl" href="research/commons-strategy-roadmap.pdf">Open PDF →</a>
+    </div>
+    <div class="card">
+      <span class="tag">Research · 4 pages</span>
+      <h3>Layer C: how AI practice spreads</h3>
+      <p>Why peer diffusion is the real bottleneck. Covers the clusters-and-threshold finding, why being watched suppresses AI use, why skill libraries go unused, and a six-step loop for spreading practice.</p>
+      <a class="dl" href="research/layer-c-diffusion-brief.pdf">Open PDF →</a>
+    </div>
+    <div class="card">
+      <span class="tag">Research · 5 pages</span>
+      <h3>Multiplayer AI: the shared run</h3>
+      <p>A map of about 50 companies building multiplayer AI. Lessons from Figma and Google Docs, what the research says about AI in groups, and why a run colleagues can see and fork is how practice spreads.</p>
+      <a class="dl" href="research/multiplayer-ai-brief.pdf">Open PDF →</a>
+    </div>
+  </div>
+
+  <h2>Where it goes next</h2>
+  <ol class="stages">
+    <li class="now"><span class="w">Stage 0</span><span><b>MVP</b><span class="q">See how Claude is used and which skills exist.</span></span></li>
+    <li><span class="w">Weeks 1–6</span><span><b>Prove it stuck</b><span class="q">Which skills colleagues kept using after 30 days, and which big jobs have no skill.</span></span></li>
+    <li><span class="w">Weeks 7–12</span><span><b>Put it in the flow</b><span class="q">One-line tips inside Claude ("people on your team use /x for this"), with a holdback group to prove they caused the lift.</span></span></li>
+    <li><span class="w">Weeks 13–20</span><span><b>Capture without effort</b><span class="q">Turn a session into a skill with one command, tested on real prompts. Retire skills nobody uses.</span></span></li>
+    <li><span class="w">Weeks 21–32</span><span><b>Shared, forkable runs</b><span class="q">Run cards that colleagues can fork into their own Claude, with credit going to the person who shared.</span></span></li>
+    <li><span class="w">Later</span><span><b>Beyond one vendor</b><span class="q">The same loop for ChatGPT, Copilot and Gemini.</span></span></li>
+  </ol>
+
+  <footer>Commons is a working name. Research date: October 2026. Figures marked † in the PDFs are secondary or vendor-reported.</footer>
+</main>
+</body>
+</html>
